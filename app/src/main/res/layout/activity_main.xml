@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_rectangle">
+
+    <View
+        android:id="@+id/vi_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tl_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        tools:text="0"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:hint=""
+        android:maxLines="1"
+        android:maxLength="15"
+        android:textColor="#737373"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_num" />
+
+    <TextView
+        android:id="@+id/tv_result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="495dp"
+        android:gravity="end"
+        android:hint="         "
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColor="#F10052"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tl_table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="15dp"
+        android:paddingTop="21dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="21dp"
+        android:shrinkColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vi_top"
+        app:layout_constraintVertical_weight="1.5">
+
+        <TableRow android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_c"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="c"
+                android:textSize="24sp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="◀"
+                android:textSize="18sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="%"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_division"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="/"
+                android:textSize="24sp"/>
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="7"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="8"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="9"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_mult"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="x"
+                android:textSize="24sp"/>
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="4"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="5"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="6"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="-"
+                android:textSize="24sp"/>
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="1"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="2"
+                android:textSize="24sp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="3"
+                android:textSize="24sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="+"
+                android:textSize="24sp" />
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_record"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background3"
+                android:onClick="buttonClicked"
+                android:text="rc"
+                android:textSize="24sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:layout_span="2"
+                android:background="@drawable/button_background2"
+                android:onClick="buttonClicked"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_point"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_background"
+                android:onClick="buttonClicked"
+                android:text="."
+                android:textSize="24sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
